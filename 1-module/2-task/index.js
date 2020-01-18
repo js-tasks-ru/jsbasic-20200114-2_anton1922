@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Эту функцию трогать не нужно
  */
@@ -10,6 +12,17 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
+
+  if ((name === null) || (name === undefined) || (name.length < 4)) {
+    return false;
+  }
+
+  for (let i of name) {
+    if (i === ' ') {
+      return false;
+    }
+  }
+  return true;
 }
 
 function sayHello() {
@@ -21,3 +34,5 @@ function sayHello() {
     print('Некорректное имя');
   }
 }
+
+sayHello();
