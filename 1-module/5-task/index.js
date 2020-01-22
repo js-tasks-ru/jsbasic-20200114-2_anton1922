@@ -4,7 +4,7 @@
  * @param {number} maxlength
  * @returns {string}
  */
-'use strict'
+'use strict';
 
 function truncate(str, maxlength) {
 
@@ -25,6 +25,6 @@ function truncate(str, maxlength) {
   truncStr += '…';
 
   return truncStr;
-  }
+}
 
   
