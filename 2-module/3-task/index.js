@@ -1,5 +1,16 @@
+'use strict';
+
 let calculator = {
-  // ваш код
+  read(a, b) {
+    calculator.valueFirst = a;
+    calculator.valueSecond = b;
+  },
+  sum() {
+    return calculator.valueFirst + calculator.valueSecond;
+  },
+  mul() {
+    return calculator.valueFirst * calculator.valueSecond;
+  },
 };
 
 // НЕ УДАЛЯТЬ СТРОКУ, НУЖНА ДЛЯ ПРОВЕРКИ
