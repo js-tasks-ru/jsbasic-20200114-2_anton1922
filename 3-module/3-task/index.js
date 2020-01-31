@@ -4,7 +4,6 @@
  */
 
 'use strict';
-let string = 'background-color';
 
 function camelize(str) {
   //transform string to array
