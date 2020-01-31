@@ -6,25 +6,12 @@
 'use strict';
 
 function camelize(str) {
-  //transform string to array
-  let primaryArray = str.split('');
-  //create new array
-  let modifiedArray = [];
-
-  //add an element to the beginning of the primaryArray
-  primaryArray.unshift(' ');
-
-  //transform symbols after '-' to upper case and add in modifiedArray
-  primaryArray.reduce((prevValue, curValue, index, array) => {
-    modifiedArray[index] = (curValue === '-') ? primaryArray[index + 1].toUpperCase() :
-      primaryArray[index + 1];
-  }, '');
-
-  //cut off the last element of the modifiedArray
-  modifiedArray.splice(modifiedArray.length - 1);
-
-  //remove '-' from the modifiedArray and return final string
-  return modifiedArray.filter((item) => {
-    return item !== '-';
-  }).join('');
+  //transform string to array without '-'
+  return str.split('-')
+  //change first letters to upper case
+  .map((item, index) => {
+    return index == 0 ? item : item[0].toUpperCase() + item.slice(1);
+  })
+  //transform array to string
+  .join('');
 }
