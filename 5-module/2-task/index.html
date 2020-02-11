@@ -23,7 +23,7 @@
                     <td>Ilia</td>
                     <td>25</td>
                     <td>1000</td>
-                    <td>Petrozavods</td>
+                    <td>Petrozavodsk</td>
                 </tr>
 
             </tbody>
@@ -68,6 +68,8 @@
         let table = new SortableTable(rows);
         document.querySelector('.result').appendChild(table.el);
 
+        const rowsCollection = table.el.querySelectorAll('tbody tr');
+        console.log(rows);
     </script>
 
     <button onclick="table.sort(0)">По имени</button>
